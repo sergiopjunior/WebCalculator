@@ -1,0 +1,161 @@
+:root {
+    --rc-gap: 6px; 
+}
+
+body, html { 
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
+.calculator-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: var(--rc-gap);
+    justify-content: center;
+    background-color: rgb(164, 164, 184);
+    padding: calc(5px + 1vw);
+}
+
+.operators-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--rc-gap)
+    
+}
+
+.container {
+    display: flex;
+    column-gap: var(--rc-gap)
+}
+
+
+.numbers-container {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    row-gap: var(--rc-gap)
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--rc-gap)
+}
+
+.btn {
+    padding: 10px 20px 10px 20px;
+    font-size: calc(10px + 1vw);
+    max-width: 57px;
+    max-height: 51px;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    width: calc(20px + 4vw);
+    appearance: none;
+    user-select: none;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.301);
+}
+
+.btn-light {
+    color: black;
+    background-color: white;
+}
+
+.btn-light:hover {
+    background-color: rgba(255, 255, 255, 0.842);
+}
+
+.btn-light:active {
+    background-color: rgba(255, 255, 255, 0.678);
+}
+
+.btn-blue {
+    color: white;
+    background-color: rgb(51, 181, 229);
+}
+
+.btn-blue:hover {
+    background-color: rgba(51, 182, 229, 0.836);
+}
+
+.btn-blue:active {
+    background-color: rgba(43, 166, 211, 0.753);
+}
+
+.btn-darkblue {
+    color: white;
+    background-color: rgb(79, 106, 163);
+}
+
+.btn-darkblue:hover {
+    background-color: rgba(69, 95, 151, 0.808)
+}
+
+.btn-darkblue:active {
+    background-color: rgba(69, 95, 151, 0.685)
+}
+
+.btn-red {
+    display: inline-flex;
+    justify-content: center;
+    background-color: rgb(240, 29, 47);
+}
+
+.btn-red:hover {
+    background-color: rgba(240, 29, 47, 0.89);
+}
+
+.btn-red:active {
+    background-color: rgba(240, 29, 47, 0.733);
+}
+
+.btn-red svg {
+    fill: white;
+    min-width: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.equal {
+    max-height: 100%;
+    background-color: rgb(43, 187, 173);
+    color: white;
+}
+
+.equal:hover {
+    background-color: rgba(43, 187, 173, 0.945);
+}
+
+.equal:active {
+    background-color: rgb(39, 175, 161);
+}
+
+.result-container {
+    display: inline-flex;
+}
+
+.result {
+    appearance: none;
+    border: none;
+    width: 100%;
+    min-height: 30px;
+    height: calc(30px + 1vw);
+    text-align: right;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.result:focus {
+    outline: none;
+}
